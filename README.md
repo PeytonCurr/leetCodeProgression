@@ -6,7 +6,7 @@ Completed NeetCode Roadmap Problems
 *Two Pointers (1/5)
 *Stack (1/7)
 *Bianary Search (1/7)
-*Sliding Window (0/6)
+*Sliding Window (1/6)
 *Linked List (0/11)
 *Trees (0/15)
 *Tries (0/3)
