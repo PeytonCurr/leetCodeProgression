@@ -7,7 +7,7 @@ Completed NeetCode Roadmap Problems
 *Stack (1/7)
 *Bianary Search (1/7)
 *Sliding Window (1/6)
-*Linked List (0/11)
+*Linked List (1/11)
 *Trees (0/15)
 *Tries (0/3)
 *Backtracking (0/9)
