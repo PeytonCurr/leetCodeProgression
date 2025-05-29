@@ -1,4 +1,4 @@
-#Brute Force - Nested Loop Solution
+#Brute Force - Nested Loop Solution - Time: O(n^2) Space: O(1)
 class Solution:
   def twoSum(self, nums: List[int], target: int) -> List[int]:
     for i, _ in enumerate(nums):
@@ -7,7 +7,7 @@ class Solution:
           return [i,j]
     return []
 
-#One Pass - Hashmap Solution
+#One Pass - Hashmap Solution - Time: O(n) Space: O(n)
 class Solution:
   def twoSum(self, nums: List[int], target: int) -> List[int]:
     prevMap = {}
