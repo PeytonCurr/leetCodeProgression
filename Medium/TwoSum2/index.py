@@ -1,13 +1,10 @@
+#Optimal Two Pointer Solution - Time: O(n) Space: O(1)
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        leftP = 0
-        rightP = len(numbers) - 1
-        
-        while leftP < rightP:
-            if numbers[leftP] + numbers[rightP] == target:
-                return [leftP + 1, rightP + 1]
-            elif numbers[leftP] + numbers[rightP] > target:
-                rightP -= 1
-            else:
-                leftP += 1
-        return []
+      l, r = 0, len(numbers)-1
+      while numbers[l] + numbers[r] != target:
+        if numbers[l] + numbers[r] > target:
+          r -= 1
+        else:
+          l += 1
+      return [l+1,r+1]
