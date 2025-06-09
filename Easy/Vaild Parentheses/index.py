@@ -1,18 +1,14 @@
+#Optimal Stack Solution - Time: O(n) Space: O(n)
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        matchingOpenings = {
-            ")" : "(",
-            "}" : "{",
-            "]" : "["
-        }
-
-        for character in s:
-            if character in matchingOpenings:
-                if stack and stack[-1] == matchingOpenings[character]:
+        closeToOpen = {')':'(', ']':'[', '}':'{'}
+        for c in s:
+            if c in closeToOpen:
+                if stack and stack[-1] == closeToOpen[c]:
                     stack.pop()
                 else:
                     return False
             else:
-                stack.append(character)
+                stack.append(c)
         return True if not stack else False
