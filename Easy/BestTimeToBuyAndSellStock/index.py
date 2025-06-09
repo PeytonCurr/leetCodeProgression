@@ -1,14 +1,13 @@
+#My Optimal Sliding Window Solution - Time: O(n) Space: O(1)
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        left = 0
-        right = 1
-        maxP = 0
-        while right < len(prices):
-            if prices[right] > prices[left]:
-                newP = prices[right] - prices[left]
-                if maxP < newP:
-                    maxP = newP
-            else:
-                left = right
-            right += 1
-        return maxP
+        maxDif = 0
+        l,r = 0, 1
+
+        while r < len(prices):
+            if prices[l] > prices[r]:
+                l = r
+            if prices[r] > maxDif + prices[l]:
+                maxDif = prices[r] - prices[l]
+            r += 1
+        return maxDif
