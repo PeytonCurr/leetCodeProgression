@@ -1,4 +1,4 @@
-#Bit Mask -2 Solution: TO(1) - SO(1)
+#Bit Mask -2 Solution: TO(nlogn) - SO(1)
 class Solution:
     def countBits(self, n: int) -> List[int]:
         res = []
