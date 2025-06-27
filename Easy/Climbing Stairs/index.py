@@ -27,9 +27,9 @@ class Solution:
 #[Optimized Space] Tabulation Solution: TO(n) - SO(n)
 class Solution:
     def climbStairs(self, n: int) -> int:
-        prev2, prev, curV = 0, 1, 1
+        prev2, prev = 0, 1
         for _ in range(1,n+1):
-            curV = prev + prev2
-            prev2 = prev
-            prev = curV
-        return curV
+            temp = prev
+            prev = prev + prev2
+            prev2 = temp
+        return prev
